@@ -10,6 +10,7 @@ vim.cmd("colorscheme minischeme")
 vim.cmd("nnoremap :e :NvimTreeToggle<CR>")
 vim.cmd("nnoremap :E :NvimTreeToggle<CR>")
 vim.cmd(":set termguicolors")
+vim.cmd(":set splitright")
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 

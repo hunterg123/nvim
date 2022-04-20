@@ -13,10 +13,10 @@ return require('packer').startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-	use{
-		'kyazdani42/nvim-tree.lua',
+	use {
+    		'kyazdani42/nvim-tree.lua',
     		requires = {
-      			'kyazdani42/nvim-web-devicons',
-    		},
+      			'kyazdani42/nvim-web-devicons', 
+  		}
 	}
 end)
