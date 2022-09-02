@@ -9,7 +9,7 @@ vim.opt.swapfile = false
 --vim.cmd("colorscheme torte")
 vim.cmd("colorscheme dracula")
 vim.cmd("nnoremap :e :NvimTreeToggle<CR>")
-vim.cmd("nnoremap :E :NvimTreeToggle<CR>")
+vim.cmd("nnoremap :<space> :Telescope find_files<CR>")
 vim.cmd(":set termguicolors")
 vim.cmd(":set splitright")
 --vim.opt.foldmethod = "expr"
