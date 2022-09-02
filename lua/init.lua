@@ -6,7 +6,8 @@ vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
---vim.cmd("colorscheme slate")
+--vim.cmd("colorscheme torte")
+vim.cmd("colorscheme dracula")
 vim.cmd("nnoremap :e :NvimTreeToggle<CR>")
 vim.cmd("nnoremap :E :NvimTreeToggle<CR>")
 vim.cmd(":set termguicolors")
