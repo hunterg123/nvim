@@ -9,5 +9,3 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 4. Open neovim using nvim, run ```:PackerInstall```
 5. After running ```:PackerInstall```, run ```:PackerSync```
 6. Install a patched font from [NerdFonts](https://www.nerdfonts.com)
-
-Neovim should be configured properly.
