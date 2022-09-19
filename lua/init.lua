@@ -4,7 +4,7 @@ require('config')
 -- Vim Options
 vim.opt.mouse = 'a'
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.swapfile = false
 --vim.cmd("colorscheme torte")
 vim.cmd("colorscheme dracula")
