@@ -3,8 +3,15 @@ require('mini.indentscope').setup()
 require('mini.statusline').setup()
 require('mini.completion').setup()
 require('mini.pairs').setup()
+require('alpha').setup(require"alpha.themes.startify".config)
+
+-- LSP Options
+local lsp = require('lsp-zero')
+lsp.preset('recommended')
+lsp.setup()
+
 require('telescope').setup()
-require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
+require'nvim-tree'.setup{ -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
   disable_netrw = true,
   hijack_cursor = false,
