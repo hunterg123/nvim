@@ -1,10 +1,26 @@
 vim.cmd('packadd packer.nvim')
 
+function get_setup(name)
+  return string.format('require("configs/%s")', name)
+end
+
 return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-	use 'echasnovski/mini.nvim'
-	use 'Mofiqul/dracula.nvim'
-	use 'folke/tokyonight.nvim'
+  use {'wbthomason/packer.nvim'}
+
+  use {
+    'echasnovski/mini.nvim', 
+    config = get_setup("mini")
+  }
+
+  use {'Mofiqul/dracula.nvim'}
+
+  use {'folke/tokyonight.nvim'}
+
+  use {
+    'glepnir/galaxyline.nvim',
+    config = get_setup("galaxyline")
+   }
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -24,29 +40,41 @@ return require('packer').startup(function()
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
-    }
-  } 
+    },
+    config = get_setup("lsp"),
+  }
+
   use {
-		'lewis6991/gitsigns.nvim',
-		requires = {
-			'nvim-lua/plenary.nvim'
-		}
-	}
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}	
-	use {
-    		'kyazdani42/nvim-tree.lua',
-    		requires = {
-      			'kyazdani42/nvim-web-devicons', 
-  		}
-	}
-	use{
-		'goolord/alpha-nvim',
-	}
+    'lewis6991/gitsigns.nvim',
+    config = get_setup("gitsigns"),
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = get_setup("treesitter")
+  }
+
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    config = get_setup("telescope"),
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = get_setup("nvimtree"),
+    requires = {
+      'kyazdani42/nvim-web-devicons', 
+    }
+  }
+
+  use{
+    'goolord/alpha-nvim',
+    config = get_setup("alpha")
+  }
+
 end)
