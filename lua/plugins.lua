@@ -72,9 +72,13 @@ return require('packer').startup(function()
     }
   }
 
+  --use{
+  -- 'goolord/alpha-nvim',
+  --  config = get_setup("alpha")
+  --}
   use{
-    'goolord/alpha-nvim',
-    config = get_setup("alpha")
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = get_setup("startup")
   }
-
 end)
