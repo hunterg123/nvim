@@ -1,1 +1,1 @@
-require("startup").setup({theme = "startify"})
+require("startup").setup({theme = "dashboard"})
