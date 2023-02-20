@@ -15,6 +15,10 @@ return require('packer').startup(function()
   use {'Mofiqul/dracula.nvim'}
 
   use {'folke/tokyonight.nvim'}
+  
+  use {'navarasu/onedark.nvim',
+    config = get_setup("onedark")
+  }
 
   use {
     'glepnir/galaxyline.nvim',

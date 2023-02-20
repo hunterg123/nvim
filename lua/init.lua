@@ -12,7 +12,8 @@ vim.g.mapleader = ' '
 -- COLORSCHEMES ------------------------------------
 -- vim.cmd("colorscheme torte")
 -- vim.cmd("colorscheme dracula")
-vim.cmd("colorscheme tokyonight-moon")
+-- vim.cmd("colorscheme tokyonight-moon")
+vim.cmd("colorscheme onedark")
 
 -- Leaders
 vim.cmd("nnoremap <leader>e :NvimTreeToggle<CR>")
