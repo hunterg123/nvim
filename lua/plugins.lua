@@ -87,4 +87,9 @@ return require('packer').startup(function()
     "nvim-telescope/telescope-file-browser.nvim",
     config = get_setup("telescope")
   }
+  
+  use{
+    "ellisonleao/glow.nvim",
+    config = get_setup("glow")
+  }
 end)
