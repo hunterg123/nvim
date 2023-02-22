@@ -29,6 +29,7 @@ vim.cmd("nnoremap <leader>s :vsplit")
 vim.cmd(":set termguicolors")
 vim.cmd(":set splitright")
 vim.cmd("nnoremap <leader>sn :source $MYVIMRC<CR>")
+vim.cmd("nnoremap <leader>xx :%!xxd<CR>")
 --vim.opt.foldmethod = "expr"
 --vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
