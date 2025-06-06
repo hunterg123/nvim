@@ -211,9 +211,6 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         },
       },
       experimental = {
-        git = {
-          async = true,
-        },
       },
       log = {
         enable = false,

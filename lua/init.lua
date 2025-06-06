@@ -1,3 +1,8 @@
+-- remove defaults from vim for snippets plugin
+vim.keymap.del("i", "<Tab>")
+vim.keymap.del("s", "<Tab>")
+vim.keymap.del("i", "<S-Tab>")
+vim.keymap.del("s", "<S-Tab>")
 require('plugins')
 
 -- Vim Options
