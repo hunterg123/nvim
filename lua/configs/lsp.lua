@@ -20,34 +20,26 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 end
 
--- Manual setup for each server
-local lspconfig = require('lspconfig')
+-- Define server configs with the new API
+vim.lsp.config("ts_ls", {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  -- Example: tighten root to avoid deno conflicts
+  -- root_dir = vim.fs.root(0, { "package.json", "tsconfig.json", ".git" }),
+})
 
--- tsserver
-lspconfig.ts_ls.setup({
+vim.lsp.config("pyright", {
   capabilities = capabilities,
   on_attach = on_attach,
 })
 
--- pyright
-lspconfig.pyright.setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
--- lua_ls
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {
     Lua = {
-      diagnostics = {
-        globals = { 'vim' },
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false,
-      },
+      diagnostics = { globals = { "vim" } },
+      workspace = { library = vim.api.nvim_get_runtime_file("", true), checkThirdParty = false },
     },
   },
 })
