@@ -3,7 +3,7 @@ require('mason').setup()
 
 -- Setup Mason LSP bridge
 require('mason-lspconfig').setup({
-  ensure_installed = { 'tsserver', 'pyright', 'lua_ls' }
+  ensure_installed = { 'ts_ls', 'pyright', 'lua_ls' }
 })
 
 -- Capabilities from nvim-cmp
@@ -18,6 +18,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+  vim.keymap.set('n', 'gl', vim.diagnostic.open_float,opts)
 end
 
 -- Define server configs with the new API
