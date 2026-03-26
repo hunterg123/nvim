@@ -1,3 +1,8 @@
+-- Disable unused providers to suppress checkhealth warnings
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+
 -- remove defaults from vim for snippets plugin
 vim.keymap.del("i", "<Tab>")
 vim.keymap.del("s", "<Tab>")
